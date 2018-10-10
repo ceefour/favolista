@@ -6,6 +6,9 @@
     "use_env_variable": "POSTGRESQL_URI"
   },
   "production": {
-    "use_env_variable": "POSTGRESQL_URI"
+    "use_env_variable": "POSTGRESQL_URI",
+    "dialectOptions": {
+      "ssl": true
+    }
   }
 }
