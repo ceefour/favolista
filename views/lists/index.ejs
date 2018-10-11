@@ -11,9 +11,10 @@
     <div class="container" style="margin-top: 2rem; margin-bottom: 2rem">
         <div class="d-flex flex-row justify-content-between align-content-between flex-wrap">
             <% listHeads.forEach(listHead => { %>
-            <div class="card" style="width: 18rem; margin-bottom: 1rem">
+            <div class="card" style="width: 10rem; margin-bottom: 1rem">
+                <img class="card-img-top" src="https://placeimg.com/240/120/nature"/>
                 <div class="card-body">
-                    <h5 class="card-title"><a class="card-title" href="/lists/<%= listHead.id %>"><%= listHead.name %></a></h5>
+                    <p class="card-subtitle"><a class="card-title" href="/lists/<%= listHead.id %>"><%= listHead.name %></a></p>
                 </div>
             </div>
             <% }) %>

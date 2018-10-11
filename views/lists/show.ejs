@@ -9,10 +9,12 @@
     <% include ../partials/header %>
 
     <div class="container" style="margin-top: 2rem; margin-bottom: 2rem">
-        <h1><%= listHead.name %></h1>
+        <a name="item1"></a>
+        <h1 class="mb-4"><%= listHead.name %></h1>
 
         <ul class="list-group">
             <% listItems.forEach((listItem, idx) => { %>
+            <a name="item<%= listItem.position + 1 %>"></a>
             <li class="list-group-item"><%= idx+1 %>. <%= listItem.bodyText %></li>
             <% }) %>
         </ul>
