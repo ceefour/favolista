@@ -4,15 +4,22 @@
 
 Before running `npm run start-dev` (replace "password" with your own):
 
-    set POSTGRESQL_URI=postgres://postgres:password@localhost/favolista_dev
+    set DATABASE_URL=postgres://postgres:password@localhost/favolista_dev
 
-## Environment variables for Production stage
+## Environment variables for Production stage on Heroku
+
+Add to Settings > Config Vars
+
+    NODE_ENV=production
+    DATABASE_URL=postgres://USERNAME:PASSWORD@YOURHOST.compute-1.amazonaws.com:5432/DATABASE
+
+## Environment variables for Production stage on Azure
 
 In Azure App Service, add to "Application settings"
 
     WEBSITE_NODE_DEFAULT_VERSION=8.11.1
     NODE_ENV=production
-    POSTGRESQL_URI=postgresql://webcert%40SERVERNAME:PASSWORD@SERVERNAME.postgres.database.azure.com/favolista_prd?sslmode=require
+    DATABASE_URL=postgres://webcert%40SERVERNAME:PASSWORD@SERVERNAME.postgres.database.azure.com/favolista_prd?sslmode=require
 
 ## Full Text Search Index
 
