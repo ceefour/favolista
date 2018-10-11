@@ -15,7 +15,9 @@
         <ul class="list-group">
             <% listItems.forEach((listItem, idx) => { %>
             <a name="item<%= listItem.position + 1 %>"></a>
-            <li class="list-group-item"><%= idx+1 %>. <%= listItem.bodyText %></li>
+            <li class="list-group-item">
+                <div class="float-left text-right" style="width: 2rem"><%= idx+1 %>.</div>
+                <div class="ml-5"><%= listItem.bodyText %></div></li>
             <% }) %>
         </ul>
     </div>
